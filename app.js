@@ -18,7 +18,6 @@ const server = http.createServer((req, res) => {
     res.write("Hi there, This is a endpoint for products via GET");
     res.end();
   } else if (req.url === "/page" && req.method === "GET") {
-    // Read the template file
     fs.readFile("main.ejs", "utf8", (err, template) => {
       if (err) {
         res.writeHead(500, { "Content-Type": "application/json" });
@@ -26,8 +25,7 @@ const server = http.createServer((req, res) => {
         return;
       }
 
-      // Compile the EJS template with data
-      const renderedPage = ejs.render(template, { name: "Tallat Amin" });
+      const renderedPage = ejs.render(template, { name: "Tallat" });
 
       res.writeHead(200, { "Content-Type": "text/html" });
       res.write(renderedPage);
