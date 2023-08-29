@@ -35,5 +35,3 @@ console.log("operating system platform: " + os.platform());
 console.log("OS release : " + os.release());
 
 console.log(JSON.stringify(os.EOL));
-
-console.log(os.getPriority(2453));
