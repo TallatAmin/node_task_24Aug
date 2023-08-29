@@ -5,7 +5,7 @@ const readline = require("readline");
 const bulletPointRegex = /^[*\-•∙‣⁃◦]\s+(.+)/;
 const bulletPoints = [];
 
-const pdfBook = fs.readFileSync("dsa.pdf");
+const pdfBook = fs.readFileSync("book.pdf");
 // console.log("file read: ", pdfBook);
 
 // // check only ( for pdf )
